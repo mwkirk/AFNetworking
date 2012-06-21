@@ -22,8 +22,11 @@
 
 #import "AFURLConnectionOperation.h"
 
+// mkirk, add for testing
+#define _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_ 1
+
 // mkirk, 5/31/2012 - Define a global so that we can detect it in the app and warn if it's enabled
-#ifdef _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_ 
+#ifdef _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_
 BOOL const AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES = YES;
 #else
 BOOL const AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES = NO;
