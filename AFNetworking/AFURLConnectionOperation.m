@@ -22,6 +22,13 @@
 
 #import "AFURLConnectionOperation.h"
 
+// mkirk, 7/23/2013 - Define a global so that we can detect it in the app and warn if it's enabled
+#if _AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES_
+BOOL const AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES = YES;
+#else
+BOOL const AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES = NO;
+#endif
+
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 #import <UIKit/UIKit.h>
 #endif
